@@ -20,12 +20,7 @@ body {
     border: 1px solid #f1f1F1;
 }
 
-/* 
-    Aucun accès à InternetAucun accès à Internet
-    Voici quelques conseils :
-
-        Vérifiez les câbles réseau, le modem et le routeur.
-        Reconnectez-vous au réseau Wi-Fi
-    DNS_PROBE_FINISHED_NO_INTERNET
-
-*/
+h1{ 
+    /* deb row / deb col / fin row / fin col */
+    grid-area:1 / 1 / 2 / -1 ;
+}
