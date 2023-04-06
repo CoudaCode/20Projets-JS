@@ -10,3 +10,22 @@ body {
     background: linear-gradient(45deg, rgb(59,50,50), rgb(22,28,29));
     height: 100vh;
 }
+.container{
+    width: 800px;
+    height: 600px;
+    background: linear-gradient(45deg, #1068b6, #ec60a6);
+    display: grid;
+    grid-template: 100px 300px 100px 100px / repeat(8,100px);
+    margin: 100px auto 0;
+    border: 1px solid #f1f1F1;
+}
+
+/* 
+    Aucun accès à InternetAucun accès à Internet
+    Voici quelques conseils :
+
+        Vérifiez les câbles réseau, le modem et le routeur.
+        Reconnectez-vous au réseau Wi-Fi
+    DNS_PROBE_FINISHED_NO_INTERNET
+
+*/
