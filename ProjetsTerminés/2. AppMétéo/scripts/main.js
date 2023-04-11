@@ -2,7 +2,7 @@ import tabJoursEnOrdre from './Utilitaire/gestionTemps.js';
 
 // console.log("DEPUIS MAIN JS:" + tabJoursEnOrdre);
 
-const CLEFAPI = '8e9391f167c17b3253b145b2a036ffd4';
+const CLEFAPI = '6108bb532a08e38871920577286e0f94';
 let resultatsAPI;
 
 const temps = document.querySelector('.temps');
@@ -38,7 +38,7 @@ function AppelAPI(long, lat) {
         // console.log(data);
 
         resultatsAPI = data;
-
+            console.log(resultatsAPI)
         temps.innerText = resultatsAPI.current.weather[0].description;
         temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°`
         localisation.innerText = resultatsAPI.timezone;

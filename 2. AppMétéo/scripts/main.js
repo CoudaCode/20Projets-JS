@@ -32,10 +32,10 @@ function ApelApi(long, lat){
     //  })
 
     fetch(`https://www.prevision-meteo.ch/services/json/lat=${long}lng=${lat}`)
-    .then(Response =>{
-         return Response.json()
+      .then(Response =>{
+          return Response.json()
+        })
+      .then((data)=>{
+      console.log(data)
       })
-       .then((data)=>{
-        console.log(data)
-       })
 }
