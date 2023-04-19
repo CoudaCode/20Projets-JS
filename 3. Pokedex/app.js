@@ -2,6 +2,7 @@ const search = document.querySelector(".recherche-poke input");
 let AllPokemon = []; // Pour stocke les pockes
 let tableauFin = []; // Pour stocke les pockemon en fr et la bonne img
 let listePoke = document.querySelector('.liste-poke')
+const chargement = document.querySelector('.loader')
 const types = {
   grass: "#78c850",
   ground: "#E2BF65",
@@ -64,6 +65,7 @@ function fetchPokemonComplet(pokmon) {
 
             // console.log(tableauFin)
             createCard(tableauFin);
+            chargement.style.display ="none"
           }
         });
     });
@@ -134,7 +136,7 @@ function addPOke(nb){
 
         let filter , allLi, titleValue , allTitles;
 
-        filter = search.value.toUpperCase()
+        filter = search.value.toUpperCase() // recupère la valeur entrer dans le formulaire
         console.log(filter)
         allLi = document.querySelectorAll('li')
         allTitles = document.querySelectorAll('li > h5')
@@ -142,7 +144,7 @@ function addPOke(nb){
         for (let i = 0; i < allLi.length; i++){
           titleValue = allTitles[i].innerText;
           console.log(titleValue)
-         if(titleValue.toUpperCase().indexOf(filter) > -1){
+         if(titleValue.toUpperCase().indexOf(filter) > -1){ // Verifie Si l'index de chaque caratère est > à -1
             allLi[i].style.display = "flex"
          }else{
             allLi[i].style.display = "none"
@@ -154,7 +156,7 @@ function addPOke(nb){
   // Anilation input 
 
 search.addEventListener("input", function (e) {
-  if (e.target.value !== "") {
+  if (e.target.value !== ""){
     e.target.parentNode.classList.add("active-input");
   } else if (e.target.value === ""){
     e.target.parentNode.classList.remove("active-input");
